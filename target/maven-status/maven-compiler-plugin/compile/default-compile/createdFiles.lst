@@ -1,0 +1,5 @@
+com\tecnologiascomputacionales\proyecto\apiREST\Application.class
+com\tecnologiascomputacionales\proyecto\apiREST\repositories\StudentRepository.class
+com\tecnologiascomputacionales\proyecto\apiREST\config\SwaggerConfig.class
+com\tecnologiascomputacionales\proyecto\apiREST\controllers\StudentController.class
+com\tecnologiascomputacionales\proyecto\apiREST\entities\StudentEntity.class

@@ -1,0 +1,117 @@
+<div class="divcredits">
+    <label class="credits">¡¡¡ Diseñada por nosotros con mucho &#x2764; &#x2764; &#x2764;  for all of you &#x2764; &#x2764; !!!
+    </label>
+</div>
+
+<div class="d-flex justify-content-center align-items-center mb-4" >
+    <h1 class="encabezado d-inline">
+               ESTUDIANTES 
+    </h1> 
+    <label class="idversion ms-2 ">(v1.0)</label>
+    <button class="btndoc d-inline ms-5" onclick="location.href='http://localhost:9090/docs/swagger-ui/index.html'">API Documentaci&oacute;n </button>
+</div>
+
+<div class="text-end mb-5 ">
+     
+    <div class="btn-group">
+        <input class="search" type="text" placeholder="Ingresa el nombre" [(ngModel)]="filtro">
+        <button class="btn" (click)="getByNameOrLastname(filtro)">Buscar</button>
+    </div>
+                
+<button type="button" class="btn ms-5" (click)="deleteStudents()">
+        Borrar Estudiantes
+</button>
+
+<button class="btn btn-primary ms-3 " routerLink="/new">
+    Nuevo Estudiante
+</button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr class="text-center">
+            <!--<th>ID</th> --> 
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>FECHA DE NACIMIENTO</th>
+            <th>EDAD</th>
+            <th>ESTADO ACADEMICO</th>
+            <th>OPCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+     @for(student of students; track student.id) {
+        <tr>
+           <!--<td class="text-center">{{student.id}}</td>--> 
+            <td class="text-center">{{student.name}}</td>
+            <td class="text-center">{{student.lastname}}</td>
+            <td class="text-center">{{student.birthdate}}</td>
+            <!--<td>{{student.birthdate | date: 'dd/MM/yyyy hh:mm a'}}</td>-->
+            <td class="text-center">{{student.age}}</td>
+            <td class="text-center">{{student.status}}</td>
+            <td class="text-end">
+                <div class="btn-group">
+                    <button class="btn btn-primary" [routerLink]="[student.id+'/edit']">
+                        Editar
+                    </button>
+                    <button class="btn btn-danger " (click)="deleteStudent(student)">
+                        Eliminar
+                    </button>
+                </div>
+            </td>
+        </tr> 
+            }
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="bubbles">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:27;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:29;"></span>
+      <span style="--i:30;"></span>
+      <span style="--i:31;"></span>
+      <span style="--i:32;"></span>
+      <span style="--i:34;"></span>
+      <span style="--i:36;"></span>
+      <span style="--i:38;"></span>
+      <span style="--i:40;"></span>
+      <span style="--i:42;"></span>
+      <span style="--i:44;"></span>
+      <span style="--i:46;"></span>
+      <span style="--i:48;"></span>
+      <span style="--i:50;"></span>
+    </div>
+  </div>
+
+  <button class="btn-flotante" (click)="mostrarCreditos()">Cr&eacute;ditos</button>
+
+<div class="creditos" id="creditos">
+  <div class="creditos-contenido">
+    <span class="cerrar" (click)="cerrarCreditos()">&times;</span>
+    <h2 class="titulo">CREADO POR:</h2>
+    <div class=" mb-5"></div>
+    <p class="desarrolladores mb-2">😈 | 🍆💦💦 ROCHA RONQUILLO LUIS ANGEL</p>
+    <p class="desarrolladores mb-2">[insertar emojis] GONZALEZ RODRIGUEZ OCTAVIO DANIEL</p>
+    <p class="desarrolladores mb-2">[insertar emojis] VAZQUEZ ALBOR ISAAC MISAEL</p>
+  </div>
+</div>
+
+
+

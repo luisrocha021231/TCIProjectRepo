@@ -1,0 +1,24 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+body {
+background-color: #242424;
+color: white;
+background-image: url('../src/assets/fondo.jpg');
+background-size: cover; 
+background-position: center;
+animation: appear 4s forwards;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, rgba(5,148,181,1) 0%, rgba(5,175,116,1) 50%, rgba(0,255,115,1) 100%);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #3c3c3c;
+  }
+  
