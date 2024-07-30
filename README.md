@@ -44,9 +44,6 @@ https://docs.docker.com/compose/install/linux/
 
  ATT. BY 
 
-* ROCHA R. LUIS A.
-* RODRIGUEZ G. OCTAVIO D.
-* VAZQUEZ A. ISAAC M.
-* 
+* ROCHA RONQUILLO LUIS ANGEL
  
 
